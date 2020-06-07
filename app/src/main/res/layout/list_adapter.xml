@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    android:elevation="7dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:padding="5dp"
+        android:background="@drawable/edittext_border"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/scheduleCodeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ins_insp_2020_0019"
+            android:padding="5dp"
+            android:gravity="end" />
+
+        <TextView
+            android:id="@+id/qualitySurveyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:text="@string/quaity_survey" />
+
+        <TextView
+            android:id="@+id/requestedbyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="@string/requested_by_saravanakumar" />
+        <TextView
+            android:id="@+id/insskTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/ins_sk" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SholkLabs</string>
+    <string name="quaity_survey">Quaity Survey</string>
+    <string name="requested_by_saravanakumar">Requested by-Saravanakumar</string>
+    <string name="ins_sk">INS-SK</string>
+    <string name="ins_insp_2020_0019">INS-INSP-2020-0019</string>
+    <string name="api_key">AIzaSyBOg5xgKrrNQlbx5p8ZbYecJ027kYEl3cU</string>
+    <string name="list">LIST</string>
+</resources>
