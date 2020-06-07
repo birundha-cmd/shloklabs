@@ -12,18 +12,29 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/colorPrimaryDark">
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/list"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:gravity="center"/>
-<ImageView
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:src="@drawable/ic_pin"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/list"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:gravity="center"/>
+        <ImageView
+            android:id="@+id/mapImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_pin"
+            android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

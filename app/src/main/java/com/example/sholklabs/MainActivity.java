@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -13,6 +14,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
    private ArrayList<ListResponse>listResponses=new ArrayList<>();
     private ArrayList<AddListDb> taskList=new ArrayList<>();
     private ProgressBar progressBar;
+    private ImageView mapImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView=findViewById(R.id.recyclerView);
         progressBar=findViewById(R.id.progressBar);
+        mapImageView=findViewById(R.id.mapImageView);
+
+        mapImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in =new Intent(MainActivity.this,MapActivity.class);
+                startActivity(in);
+            }
+        });
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
@@ -150,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(aVoid);
             Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
             getList();
-
 
         }
     }
